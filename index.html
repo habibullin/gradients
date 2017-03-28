@@ -1,7 +1,21 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.js"></script> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 <script>
+	$.getJSON( "gradients.json", function( data ) {
+	  var items = [];
+	  $.each( data, function( key, val ) {
+	    items.push( "<li id='" + key + "'>" + val + "</li>" );
+	  });
+	 
+	  $( "<ul/>", {
+	    "class": "my-new-list",
+	    html: items.join( "" )
+	  }).appendTo( "body" );
+	});
+</script>
+
+<!-- <script>
 	$(document).ready(function () {
 	    $.getJSON("gradients.json",
 	    function (json) {
@@ -21,7 +35,7 @@
         <th>title</th>
         <th>image_data</th>
     </tr>
-</table>
+</table> -->
 
 
 <!-- 
