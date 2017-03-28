@@ -4,12 +4,12 @@
 <script>
 	$.getJSON( "gradients.json", function( data ) {
 	  var items = [];
-	  $.each( data, function( key, val ) {
-	    items.push( "<li id='" + key + "'>" + val + "</li>" );
+	  $.each( data, function( from, to ) {
+	    items.push( "<div style='width: 100px; height: 100px; background: linear-gradient(to right, " + from + ", " + to + ");'>Block</div>" );
 	  });
 	 
-	  $( "<ul/>", {
-	    "class": "my-new-list",
+	  $( "<div/>", {
+	    "class": "gradients",
 	    html: items.join( "" )
 	  }).appendTo( "body" );
 	});
