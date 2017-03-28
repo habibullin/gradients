@@ -1,1 +1,64 @@
-Hello! Hi!
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script>
+	$(document).ready(function () {
+	    $.getJSON("gradients.json",
+	    function (json) {
+	        var tr;
+	        for (var i = 0; i < json.length; i++) {
+	            tr = $('<tr/>');
+	            tr.append("<td>" + json[i].title + "</td>");
+	            tr.append("<td>" + json[i].image_data + "</td>");
+	            $('table').append(tr);
+	        }
+	    });
+	});
+</script>
+
+<table>
+    <tr>
+        <th>title</th>
+        <th>image_data</th>
+    </tr>
+</table>
+
+
+<!-- 
+<div id="insert-pos"></div>
+
+<script id="div-template" type="text/x-handlebars-template">
+  <div id="cases" class="c-works">
+    <h2 class="work-header" style="display: none;"></h2>
+    {{#each works-item}}
+    <div class="box_skvere">
+      <img data-url="works{{image-data}}" src="img/works/{{image-data}}.jpg" />
+      <h3>{{title}}</h3>
+    </div>
+    {{/each}}
+  </div>
+</script>
+
+<script>
+//   var json = {
+//   "works-item": [{
+//     "title": "Limited <br>для VAZ",
+//     "image-data": "VAZ",
+//   }, {
+//     "title": "Limited <br>в BAZ",
+//     "image-data": "BAZ",
+//   }]
+// };
+$.getJSON("gradients.json", function(json) {
+    cons	ole.log(json); // this will show the info it in firebug console
+});
+
+
+var source = $("#div-template").html();
+var template = Handlebars.compile(source, {
+  noEscape: true
+});
+
+var html = template(json);
+$("#insert-pos").html(html);
+</script> -->
