@@ -4,8 +4,8 @@
 <script>
 	$.getJSON( "gradients.json", function( data ) {
 	  var items = [];
-	  $.each( data, function( from, to ) {
-	    items.push( "<div style='width: 100px; height: 100px; background: linear-gradient(to right, " + from + ", " + to + ");'>Block</div>" );
+	  $.each( data, function( name, color ) {
+	    items.push( "<div style='width: 100px; height: 100px; background: linear-gradient(to right, " + color[0] + ", " + color[1] + ");'>" + name + "</div>" );
 	  });
 	 
 	  $( "<div/>", {

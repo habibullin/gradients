@@ -1,5 +1,5 @@
 {
-  "red": "green",
-  "blue": "gray",
-  "#fefcea": "#f1da36"
+  "GradName": [ "blue", "#f1da36" ],
+  "Beauty": [ "#fefcea", "green" ],
+  "Beauty2": [ "red", "green" ]
 }
