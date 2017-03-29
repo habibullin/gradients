@@ -18,12 +18,25 @@ h1{
 	padding: 40px 0;
 }
 
+.content:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+
 .gradient{
 	width: 200px;
 	height: 200px;
 	border-radius: 100px;
-	margin: 20px;
 	background: #ccc; /* debug */
+}
+
+.grad-wrap{
+	float: left;
+	margin: 20px;
 }
 
 .intro{
