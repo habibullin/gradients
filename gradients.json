@@ -1,5 +1,5 @@
 {
-  "GradName": [ "blue", "#f1da36" ],
-  "Beauty": [ "#fefcea", "green" ],
-  "Beauty2": [ "red", "green" ]
+  "Morning": [ "#ff9a9e", "#fad0c4" ],
+  "Beauty": [ "#a18cd1", "#fbc2eb" ],
+  "Nigth City": [ "#fbc2eb", "#a6c1ee" ],
 }
