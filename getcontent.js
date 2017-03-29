@@ -11,5 +11,5 @@ $.getJSON( "gradients.json", function( data ) {
 	$( "<div/>", {
 		"class": "gradients",
 		html: items.join( "" )
-	}).appendTo( "body" );
+	}).appendTo( "content" );
 });
