@@ -1,14 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="style.css">
+	<title>Gradients</title>
+</head>
+<body>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script>
-	$.getJSON( "gradients.json", function( data ) {
-	  var items = [];
-	  $.each( data, function( name, color ) {
-	    items.push( "<div style='width: 200px; height: 200px; border-radius: 100px; background: linear-gradient(to top, " + color[0] + ", " + color[1] + ");'>" + name + "</div>" );
-	  });
-	 
-	  $( "<div/>", {
-	    "class": "gradients",
-	    html: items.join( "" )
-	  }).appendTo( "body" );
-	});
-</script>
+<script src="getcontent.js"></script>
+</body>
+</html>
